@@ -2,7 +2,22 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    hash = {}
+    result = []
+    for num in a:
+        if num > 0:
+            if num in hash and num not in result:
+                result.append(num)
+            else:
+                hash[num] = -num
+
+        else:
+            num = -num
+            if num in hash and num not in result:
+                result.append(num)
+            else:
+                hash[num] = -num
+
 
     return result
 

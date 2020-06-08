@@ -6,7 +6,16 @@ def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+    hash = {}
+    for x in queries:
+        hash[x] = x
+    
+    for f in files:
+        words = f.split("/")
+        if words[-1] in hash:
+            result.append(f)
+
 
     return result
 
