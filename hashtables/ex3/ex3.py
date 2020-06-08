@@ -2,8 +2,18 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
+    hash = {}
+    len = 0
+    result = []
+    for lists in arrays:
+        len += 1
+        for numb in lists:
+            if numb not in hash:
+                hash[numb] = 1
+            else:
+                hash[numb] += 1
+                if hash[numb] == len and numb not in result:
+                    result.append(numb)
     return result
 
 
